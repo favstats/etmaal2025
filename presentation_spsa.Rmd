@@ -1,0 +1,249 @@
+---
+output: 
+  beamer_presentation:
+    slide_level: 2
+    includes:
+     in_header: pres_header.tex
+header-includes:
+  - \usepackage{xcolor}
+  - \usepackage{fontawesome5}
+  - \setlength{\itemsep}{-3pt}
+  - \setlength{\parskip}{0pt}
+  - \setlength{\parsep}{0pt}
+  - \title[SPSA 2025 - Online competition between unequals]{\textbf{United in Diversity, Divided by Algorithms?} \\ \quad \vspace{.2cm} \\ \large A Cross-National Examination of the Role of Ad Delivery Algorithms for Political Campaigns during the 2024 European Parliament Elections}
+  - \institute{\normalsize \textit{\textcolor{blue}{Fabio Votta, Simon Kruschinski, Mads Fuglsang Hove, Anamaria Dutceac Segesten, Márton Bene, Christina Gahn, Linn Sandberg, Jan Zilinsky, Claes de Vreese, James P. Cross, Ruth Dassonneville, Tom Dobber and Benjamin Guinaudeau}} \\ \small \vspace{.7cm} January 9, 2025}
+--- 
+
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{normal text}{size=\tiny}
+
+\titlepage
+
+
+## Introduction
+
+\begin{enumerate}
+  \item Representative democracy relies on the principle of fair competition
+    between political entrepreneurs
+  \vspace{.2cm}
+  \pause
+
+  \item Campaign regulations serve this purpose:
+    \begin{itemize}
+      \item the "Equal-time rule" in US, "second counting" rule in Europe
+      \item regulation of campaign finances
+    \end{itemize}
+  \vspace{.2cm}
+  \pause
+
+  \item Advent of social media and targeted advertisement disrupts 
+    traditional campaigns and challenge regulations
+\end{enumerate}
+
+## Party, Campaigns, and Social Media
+
+1. Targeted advertising has transformed campaigns.
+   * Targeted advertisement
+   * Taylored messages
+   
+\vspace{.2cm}
+\pause
+
+2. Uneven playing field for parties:
+   * 'Natural': Over-represented voter bases on social media
+   * Artificial: Market-specific cost advantages
+
+## Party, Campaigns, and Social Media
+
+* 2023 Dutch election: 64% of total expenditures in the last campaign week
+\vspace{.5cm}
+
+![](pic/dutch_election.png)
+
+## Research Questions
+
+1. Do parties pay the same price for ads?
+
+\vspace{.5cm}
+\pause
+
+2. What drives price differences?
+
+## Why Is the Fairness of Online Competition Hard to Study?
+
+\begin{enumerate}
+  \item Observational studies face many confounders:
+    \begin{itemize}
+      \item content, account history, agenda, targeting criteria
+    \end{itemize}
+  \vspace{.2cm}
+  \pause
+
+  \item Sock-puppet experiments:
+    \begin{itemize}
+      \item lack external validity
+    \end{itemize}
+  \vspace{.2cm}
+  \pause
+
+  \item Our approach: Audit study using real party accounts
+\end{enumerate}
+
+## Builds upon Votta et al. 2024
+
+![](pic/pol_com.png)
+
+## Design
+
+
+\begin{enumerate}
+  \item \textbf{Context:}
+    \begin{itemize}
+      \item 2024 European elections (June)
+      \item Facebook and Instagram
+    \end{itemize}
+    \vspace{.2cm}
+    \pause
+
+  \item \textbf{Approach:}
+    \begin{itemize}
+      \item Real party accounts (30 parties across 8 countries)
+      \item Identical "get-out-the-vote" ads with same targeting settings
+      \item €1/day for 7 days (April 29, 2024 start)
+      \item Outcome: Cost per 1,000 users reached
+    \end{itemize}
+    \vspace{.2cm}
+    \pause
+
+  \item \textbf{Targeting conditions:}
+    \begin{itemize}
+      \item No targeting
+      \item Interested in politics (most-likely)
+      \item Below-university education (least-likely)
+    \end{itemize}
+    \vspace{.2cm}
+    \pause
+
+  \item \textbf{Implications:}
+    \begin{itemize}
+      \item Equal prices would suggest that targeted ads do not distort competition
+    \end{itemize}
+\end{enumerate}
+
+
+## Do Parties Pay the Same Price?
+
+\begin{itemize}
+  \item \textbf{High variance across countries}
+\end{itemize}
+
+\begin{center}
+    \includegraphics[height=\textheight]{pic/countries.png}
+\end{center}
+
+
+
+## Do Parties Pay the Same Price?
+
+\begin{itemize}
+  \item \textbf{Within-country differences}:
+\begin{itemize}
+   \item 4\% average variation (max 27\%)
+   \item Small differences but millions of additional campaign reaches
+\end{itemize}
+\end{itemize}
+
+\begin{center}
+    \includegraphics[height=0.8\textheight]{pic/countries.png}
+\end{center}
+
+## Do Parties Pay the Same Price?
+
+\begin{itemize}
+\item \textbf{Most variation with "No Targetting"}
+\begin{itemize}
+  \item algorithm more free $\rightarrow$ more bias
+\end{itemize}
+\end{itemize}
+
+\vspace{.5cm}
+
+\begin{center}
+    \includegraphics[height=0.8\textheight]{pic/conditions.png}
+\end{center}
+
+
+## Three Types of Factors Likely to Affect the Price Differences
+
+1. \textbf{Account-level factors:}
+   * Spending history, engagement patterns
+
+\vspace{.2cm}
+\pause   
+
+2. \textbf{Party-level factors}:
+   * Ideology, electoral performance
+
+\vspace{.2cm}
+\pause
+
+3. \textbf{Market-level factors}:
+   * Audience size, ad competition
+
+## What Drives Price Differences?
+
+\Large\textcolor{red}{%
+  \faExclamationTriangle\; Disclaimer: Low statistical power requires caution when drawing conclusions \faExclamationTriangle\;
+}
+
+
+
+## What Drives Price Differences?
+
+\begin{center}
+    \includegraphics[height=\textheight]{pic/account.png}
+\end{center}
+
+## What Drives Price Differences?
+
+\begin{center}
+    \includegraphics[height=\textheight]{pic/party.png}
+\end{center}
+
+## What Drives Price Differences?
+
+\begin{center}
+    \includegraphics[height=\textheight]{pic/market.png}
+\end{center}
+
+## Conclusion
+
+\begin{enumerate}
+  \item Ad algorithms (unintentionally) favor some political actors
+  \vspace{.2cm}
+  \pause
+
+  \item Within-country price variation:
+    \begin{itemize}
+      \item Average 4\% (max 27\%)
+      \item Significant exposure bias
+    \end{itemize}
+  \vspace{.2cm}
+  \pause
+
+  \item Key drivers:
+    \begin{itemize}
+      \item Audience size
+      \item Spending history
+      \item Ideology (?)
+      \item Transnational parties (?)
+    \end{itemize}
+  \vspace{.2cm}
+  \pause
+
+  \item Calls for stricter regulation to preserve democracy
+    \begin{itemize}
+      \item Algorithmic fairness
+      \item Algorithmic access for independent researchers
+    \end{itemize}
+\end{enumerate}

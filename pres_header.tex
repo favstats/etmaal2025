@@ -1,0 +1,100 @@
+\usepackage[english]{babel}
+\usepackage[scaled]{helvet}  
+\usepackage{hyperref}
+\usepackage{listings}
+\setbeamercolor{block title}{bg=blue!30,fg=black}
+\usepackage{xmpmulti, caption, appendixnumberbeamer, amsmath, bbding, tikz, cancel, ulem, changepage, xcolor, tcolorbox, amssymb, textpos}
+
+% TikZ Libraries
+\usetikzlibrary{positioning, shapes, calc}
+
+% Color Definitions
+\definecolor{purple}{rgb}{0.9, 0.17, 0.31}
+\definecolor{deepPurple}{RGB}{0.9, 0.17, 0.31}
+\definecolor{blue}{HTML}{0D4F77}
+\definecolor{slate}{HTML}{708090}
+\definecolor{lightblue}{RGB}{176, 196, 222}
+
+% Beamer Theme Customizations
+\setbeamercolor{frametitle}{fg=blue}
+\setbeamercolor{title}{fg=blue}
+\setbeamercolor{background}{bg=blue}
+\setbeamercolor{itemize item}{fg=blue}
+\setbeamercolor{itemize subitem}{fg=blue}
+\setbeamercolor{enumerate item}{fg=blue}
+\setbeamercolor{enumerate subitem}{fg=blue}
+\setbeamercolor{button}{bg=white,fg=blue}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}{$\triangleright$}
+\lstset{language=[LaTeX]TeX, breaklines=true, basicstyle=\tt\scriptsize}
+% \setbeamercovered{transparent}
+\setbeamercolor{block title}{bg=blue!30,fg=black}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+
+% Custom Commands
+\newcommand{\highlight}[1]{%
+  \tikz[baseline=(A.base)] \node[draw=purple, rectangle, inner sep=5pt] (A) {#1};%
+}
+\newcommand\FrameText[1]{%
+  \begin{textblock*}{\paperwidth}(0pt,\textheight)\raggedright #1\hspace{.5em}\end{textblock*}
+}
+\newcommand{\bemph}[1]{%
+  \textcolor{blue}{#1}%
+}
+\newcommand{\toggleemph}[2]{%
+  \only<#1>{\textcolor{blue}{#2}}%
+}
+
+% Add progress bar
+\usepackage{xcolor}
+\definecolor{lightblue}{RGB}{176, 196, 222}
+
+\setbeamertemplate{footline}{%
+  \color{black}
+  \hfill\insertframenumber
+  \hspace{1em}
+  \vspace{0.5cm}
+  % Adjust spacing as needed
+}
+
+% \newcommand{\progressbar}{
+%  \ifnum\insertframenumber<2
+%  \else
+% 
+%                                     % Check if it's not the first slide (title page)
+%                                     \tikz[overlay, remember picture]{
+%                                         % Define the positions and labels of your sections
+%                                     \newcommand{\sectionpositions}{{1, 5, 19, 31, 37, 38, 47}}
+%                                         \newcommand{\sectionlabels}{{"Intro", "Contexte", "Expérience", "Résultats", "Conclusion", "Agenda", "Appendix"}} % Update labels as needed
+% 
+%                                         \foreach \i in {1,2,3,4,5, 6, 7} {                                            % Check if the current section is reached
+%                                             \pgfmathparse{\insertframenumber>=\sectionpositions[\i-1] ? "blue" : "lightgray"}
+%                                             \edef\dotcolor{\pgfmathresult}
+%                                             % Place the dot
+% 
+%                                             \fill[\dotcolor] ($(current page.north east)+(-0.5cm, -\i*1cm)$) circle (0.1);
+%                                             % Add label in light grey, positioned above the dot
+%                                             \node[text=gray, anchor=south] at ($(current page.north east)+(-0.6cm, -\i*1cm + 0.1cm)$) {\tiny\pgfmathparse{\sectionlabels[\i-1]}\pgfmathresult};
+%                                         }
+%                                     }
+%     \fi % End of the outermost \ifnum
+% }
+
+
+% Set the side template to include the vertical progress bar
+% \setbeamertemplate{sidebar right}{
+%   \vbox to \paperheight{
+%     \vfill
+%     \progressbar
+%     \vspace*{-6cm}
+%   }}
+
+% \setbeamersize{sidebar width right=1cm} % Adjust the width of the sidebar
+
+% Remove the bottom navigation bar if it's not needed
+\setbeamertemplate{navigation symbols}{}
+
+% TColorBox Configuration
+\tcbset{highlight style/.style={colback=blue, colframe=blue}}
